@@ -3,7 +3,7 @@ const path = require('path');
 const session = require('express-session');//session to do
 const exphbs = require('express-handlebars');//handlebars to do
 const routes = require('./controllers');//routes to do
-const sequelize = require('./config/connection');//sequelize to do
+const sequelize = require('./config/connection');
 
 const app = express();
 
@@ -15,7 +15,7 @@ const sess={
     saveUninitialized:true,
 };
 
-// app.use(session(sess));
+ app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'public')));//todo public
