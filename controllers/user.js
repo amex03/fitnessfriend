@@ -10,7 +10,7 @@ const UserController = {
         });
         req.sessionsave(() => {
             req.session.loggedIn = true;
-            
+            req.session.user = dbUserData.get({ plain: true });
             res.status(200).json(dbUserData);
         });
     } catch(err){
@@ -18,6 +18,33 @@ const UserController = {
         res.status(500).json(err);
  }
     },
+
+    login: async (req, res) => {
+        try{
+            const dbUserData = await User.findOne({
+                where:{
+                    email: req.body.email,
+                },
+            });
+            if (!dbUserData) {
+                res.status(400).json({ message: 'No user with that email address!' });
+                return;
+            }
+            const validPassword = await dbUserData.checkPassword(req.body.password);
+             if (!validPassword) {
+                 res.status(400).json({ message: 'Incorrect password!' });
+                 return;
+             }
+                req.session.save(() => {
+                    req.session.loggedIn = true;
+                    req.session.user = dbUserData.get({ plain: true });
+                    res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
+                });
+            }catch(err){
+                    console.log(err);
+                    res.status(500).json(err);
+                }
+        },
 };
 
 
