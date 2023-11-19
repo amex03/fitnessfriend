@@ -15,13 +15,18 @@ content :{
     type:DataTypes.STRING,
     allowNull:false,
 },
-user_id: {
+user_name: {
     type:DataTypes.STRING,
     references: {
         model:'User',
         key: 'username'
     },
 },
+date_created:{
+    type:DataTypes.STRING,
+    allowNull:false,
+    defaultValue:DataTypes.NOW,
+  }  ,      
 sequelize,
 timestamps:false,
 freezeTableName:true,

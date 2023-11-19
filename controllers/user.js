@@ -18,7 +18,7 @@ const UserController = {
         res.status(500).json(err);
  }
     },
-
+//login
     login: async (req, res) => {
         try{
             const dbUserData = await User.findOne({
