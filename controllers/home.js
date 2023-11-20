@@ -1,5 +1,5 @@
 const{Dashboard, Comment} = require('../models');
-const { post } = require('../routes');
+
 
 const HomepageController = {
     getHomepage: async(req,res)=>{
