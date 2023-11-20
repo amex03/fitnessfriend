@@ -1,59 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>FitnessFriend</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
-  <!-- MDB -->
-  <link rel="stylesheet" href="css/mdb.min.css" />
-</head> 
-
-<body>
-  <!-- Background image -->
-  <div class="bg-image" style="
-  background-image: url('img/ff2.jpeg');
-  height: 100vh;">
-  </div>
-  <!-- Background image -->
-  <!-- Na vBar -->
-
   <head>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-light"
-      style="background-color: rgba(249, 240, 240, 0.955); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-      <div class="container"></div>
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="img/Fitness.jpg" height="80" alt="Fitness-Friend Logo" loading="lazy" />
-          <small> Fitness Friend</small>
-        </a>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-
-
-
-
-
-
-
-
-      </div>
-    </nav>
-    <!-- Navbar Ends -->
+  <!-- Bootstrap JavaScript and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
   </head>
 
+<body>
+<!-- NavBar -->
+<!--LogIn and Sign Up Starts-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Fitness Friend</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+      </li>
+    </ul>
+  </div>
+  <!--Login and Sign Up Ends-->
+  <!-- Navbar Ends -->
+</nav>
 
 
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<!--Login Modal End-->
+<!--Login Form-->
+<form id="loginForm">
+  <div class="form-group">
+    <label for="loginEmail">Email address</label>
+    <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="loginPassword">Password</label>
+    <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+  </div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary">Login</button>
+</div>
+</div>
+</div>
+</div>
+<!--Login Form End-->
+<!--Sign Up Modal-->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<!--Sign Up Modal End-->
+<!--Sign Up Form-->
+<form id="signupForm">
+  <div class="form-group">
+    <label for="signupEmail">Email address</label>
+    <input type="email" class="form-control" id="signupEmail" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="signupPassword">Password</label>
+    <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+  </div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary">Sign Up</button>
+</div>
+</div>
+</div>
+</div>
+<!--Sign Up Form End-->
 
 
-
+<!--BootStrap Things-->
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+    <div class="text-center">
+      <img
+        class="mb-4"
+        src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png"
+        style="width: 250px; height: 90px"
+      />
+      <h5 class="mb-3">Thank you for using our product. We're glad you're with us.</h5>
+      <p class="mb-3">MDB Team</p>
+      <a
+        class="btn btn-primary btn-lg"
+        href="https://mdbootstrap.com/docs/standard/getting-started/"
+        target="_blank"
+        role="button"
+        >Start MDB tutorial</a
+      >
+    </div>
+  </div>
+</div>
+<!-- End your project here-->
 
 
 
