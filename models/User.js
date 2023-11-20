@@ -33,11 +33,21 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate:{
-                len: [8]
+                isStrongPass(value){
+                    const strongPasswordOptions={
+                        minlenght: 8,
+                        minLowercase: 1,
+                        minUppercase: 1,
+                        minNumbers: 1,
+                        minSymbols: 1,
+                    };
+                    if(!isStrongPassword(value, strongPasswordOptions)){
+                        throw new Error('Password is not strong enough');
+                    }
             },
         },
     },
-    {
+    
     hooks:{
         beforeCreate: async (newUserData) =>{
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
