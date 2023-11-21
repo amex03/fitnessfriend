@@ -14,7 +14,11 @@ const DashboardController = {
             console.log(err);
             res.status(500).json(err);
         }
-    }
-        };
+    },
+    updateDashboard: async (req, res) => {
+        try{
+            const dashboard
+
+    
 
         module.exports = DashboardController;
