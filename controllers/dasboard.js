@@ -32,6 +32,19 @@ const DashboardController = {
         }
     }
     };
+
+     deleteDashBoard:async (req, res) => {
+        try{
+            const dbDashboardData = await Dashboard.destroy({
+                where: {
+                    id: req.params.id,
+                },
+            })
+            res.json(dbDashboardData);
+        }catch (err) {
+            res.status(500).json(err);
+        }
+    };
     
 
         module.exports = DashboardController;
