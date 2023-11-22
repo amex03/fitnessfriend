@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');//handlebars to do
-const routes = require('./controllers');//routes to do
+const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const session = require('express-session');
 const { strict } = require('assert');
@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'public')));//todo public
 
-app.use(routes);//todo routes
+app.use(routes);
 
 sequelize.sync({force:false}).then(()=>{
     app.listen(PORT,()=>console.log('Now listening'));

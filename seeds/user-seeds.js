@@ -19,24 +19,24 @@ const userData = [
     email: 'bobsmith@gmail.com', 
     password: 'Password12+3'
  },
- { username: 'Mike',
+ { username: 'Mikee',
  email: 'mike@example.com',
     password: 'Password12+3'
     },
 
-    { username: 'Joe',
+    { username: 'Joee',
     email: 'joe@example.com',
     password: 'Password12+3'
     },
-    { username: 'John',
+    { username: 'Joh22n',
     email: 'jany@example.com',
     password: 'Password12+3'
     },
-    { username: 'mary',
+    { username: 'mary123',
     email: 'mary@example.com',
     password: 'Password12+3'
     },
-    { username: 'jeny',
+    { username: 'jen22y',
     email: 'jenny@example.com',
     password: 'Password12+3'
     },

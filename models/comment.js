@@ -23,10 +23,12 @@ user_name: {
     },
 },
 date_created:{
-    type:DataTypes.STRING,
+    type:DataTypes.DATE,
     allowNull:false,
     defaultValue:DataTypes.NOW,
-  }  ,      
+  }  ,  
+},
+{    
 sequelize,
 timestamps:false,
 freezeTableName:true,

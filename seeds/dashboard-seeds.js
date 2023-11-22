@@ -26,21 +26,21 @@ const {Dashboard} = require('../models');
         id:4,
         title:'is liftin heavy really important for muscle growth?',
         content:'Lifting heavy is not really important for muscle growth, you can do high reps and low weight and still get the same results.',
-        user_name:'Mike',
+        user_name:'Mikee',
         date_created:'2021-10-12'
     },
     {
         id:5,
         title:'How to lose weight',
         content:'You can lose weight by eating healthy and working out. You can also do cardio, and drink lots of water.',
-        user_name:'Joe',
+        user_name:'Joee',
         date_created:'2021-10-12'
     },
     {
         Id:6,
         title:'How to gain weight',
         content:'You can gain weight by eating more calories than you burn, you can also eat more protein and carbs.',
-        user_name:'John',
+        user_name:'Joh22n',
         date_created:'2021-10-12'
     },
     {

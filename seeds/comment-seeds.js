@@ -25,21 +25,21 @@ const commentData = [
     {
         id:4,
         content:'I agree with this article',
-        user_name:'Mike',
+        user_name:'Mikee',
         date_created:'2021-10-12',
         dashboard_id:4
     },
     {
         id:5,
         content:'This is a great article',
-        user_name:'Joe',
+        user_name:'Joee',
         date_created:'2021-10-12',
         dashboard_id:5
     },
     {
         id:6,
         content:'I agree with this article',
-        user_name:'John',
+        user_name:'Joh22n',
         date_created:'2021-10-12',
         dashboard_id:6
     },
@@ -60,7 +60,7 @@ const commentData = [
     {
         id:9,
         content:'This is a great article',
-        user_name:'Mike',
+        user_name:'Mikee',
         date_created:'2021-10-12',
         dashboard_id:1
     },
