@@ -14,4 +14,5 @@ const seedAll = async () => {
     await seedComment();
   
     process.exit(0);
-}
+};
+seedAll();
