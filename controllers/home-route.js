@@ -1,10 +1,10 @@
-const{Dashboard, Comment} = require('../models');
+const router = require('express').Router();
+ const { Dashboard, Comment, User } = require('../models');
 
-
-const HomepageController = {
-    getHomepage: async(req,res)=>{
-        try{
-            const isLogged = req.session.loggedIn;
+//
+router.get('/', async (req, res) => {
+    try{
+        const isLogged = req.session.loggedIn;
               const dashboardData = await Dashboard.findAll({
                 include:[{
                     model:Comment,
@@ -29,7 +29,6 @@ const HomepageController = {
             res.status(500).json(err);
         }
     }
-};
+);
 
-
-module.exports = HomepageController;
+module.exports = router;
