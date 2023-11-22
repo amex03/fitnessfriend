@@ -42,4 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Email:', email, 'Password:', password);
         }
     });
+    app.post('/addPost', (req, res) => {
+        const title = req.body.title;
+        const content = req.body.content;
+      
+        // Validate data, add to database, etc.
+      
+        res.redirect('/blog');
+      });
 });
