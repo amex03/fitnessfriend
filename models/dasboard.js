@@ -1,5 +1,5 @@
 const {Model , DataTypes} =require ('sequelize');
- const sequelize =requiere('../config/connection');
+ const sequelize =require('../config/connection');
 
  class Dashboard extends Model{}
 
@@ -27,10 +27,12 @@ const {Model , DataTypes} =require ('sequelize');
             }
         },
       date_created:{
-        type:DataTypes.STRING,
+        type:DataTypes.DATE,
         allowNull:false,
         defaultValue:DataTypes.NOW,
       }  ,
+    },
+    {
       sequelize,
       timestamps:false,
       freezeTableName: true,

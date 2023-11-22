@@ -1,9 +1,9 @@
 const User =require ('./User')
-const Dashboard = requiere ('./dasboard')
+const Dashboard = require ('./dasboard')
 const Comment =require ('./comment')
 
 
-Dashboard.belongTo(User,{
+Dashboard.belongsTo(User,{
     foreignKey:'user_name',
     targekey:'username'
 });

@@ -1,6 +1,6 @@
 const {Model, DataTypes} = require('sequelize');
 const bcrypt = require('bcrypt');
-const  { isStrongPassword } = require('validator');
+const { isStrongPassword } = require('validator');
 const sequelize = require('../config/connection');
 
 // create our User model
@@ -20,7 +20,9 @@ User.init(
         },
         username:{
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,
+            indexes: [{unique: true, fields: ['username']}],
         },
         email:{
             type: DataTypes.STRING,
@@ -34,32 +36,33 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate:{
-                isStrongPass(value){
+                isStrongPassword(value) {
                     const strongPasswordOptions={
-                        minlenght: 8,
+                        minLength: 8,
                         minLowercase: 1,
                         minUppercase: 1,
                         minNumbers: 1,
-                        minSymbols: 1,
+                        minSymbols: 1
                     };
-                    if(!isStrongPassword(value, strongPasswordOptions)){
+                    if (!isStrongPassword(value, strongPasswordOptions)) {
                         throw new Error('Password is not strong enough');
                     }
-            },
-        },
+                }
+            }
+        }
     },
-    
-    hooks:{
-        beforeCreate: async (newUserData) =>{
-            newUserData.password = await bcrypt.hash(newUserData.password, 10);
-            return newUserData;
+    {
+        hooks: {
+            beforeCreate: async (newUserData) => {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            }
         },
-    },
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'user'
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user'
     }
     );
 
